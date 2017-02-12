@@ -29,6 +29,6 @@ app.post('/favorites', function(req, res){
   res.send(data);
 });
 
-app.listen(3000, function(){
-  console.log("Listening on port 3000");
+var server = app.listen(process.env.PORT || 3000, function(){
+  console.log("Listening on port " + server.address().port);
 });
