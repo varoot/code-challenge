@@ -17,6 +17,7 @@
       </nav>
     </header>
     <div class="container-fluid">
+      <!-- Home: search input and search result -->
       <section id="home" class="js-page">
         <form id="search-form" class="form-group">
           <label for="search">Search Movies</label>
@@ -29,6 +30,8 @@
         </form>
         <div id="search-results" class="list-group"></div>
       </section>
+
+      <!-- Movie: displaying detail -->
       <section id="movie" class="js-page hidden">
         <div>
           <a id="movie-back" href="#home" class="js-nav-link">Back</a>
@@ -54,6 +57,8 @@
           <div><strong>Country:</strong> <span data-field="Country"></span></div>
         </div>
       </section>
+
+      <!-- Favorites -->
       <section id="favorites" class="js-page hidden">
         <h1>Favorites</h1>
         <div id="favorite-list" class="list-group"></div>
