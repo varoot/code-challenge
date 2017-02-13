@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Varoot Code Challenge</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>  
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav" id="nav">
+            <li class="active"><a href="#home" class="js-nav-link js-nav-link-reset">Home</a></li>
+            <li><a href="#favorites" class="js-nav-link js-nav-link-reset">Favorites</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid">
+      <section id="home" class="js-page">
+        <form id="search-form" class="form-group">
+          <label for="search">Search Movies</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="search-input">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="submit">Go!</button>
+            </span>
+          </div>              
+        </form>
+        <div id="search-results" class="list-group"></div>
+      </section>
+      <section id="movie" class="js-page hidden">
+        <div>
+          <a id="movie-back" href="#home" class="js-nav-link">Back</a>
+        </div>
+        <h1>
+          <span id="movie-title"></span>
+          <button id="favorite-btn" type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <span id="favorite-btn-text">Add to Favorite</span>
+          </button>
+        </h1>
+        <div id="movie-message">Loading...</div>
+        <div id="movie-detail" class="hidden">
+          <div><strong>Rated:</strong> <span data-field="Rated"></span></div>
+          <div><strong>Released:</strong> <span data-field="Released"></span></div>
+          <div><strong>Runtime:</strong> <span data-field="Runtime"></span></div>
+          <div><strong>Genre:</strong> <span data-field="Genre"></span></div>
+          <div><strong>Director:</strong> <span data-field="Director"></span></div>
+          <div><strong>Writer:</strong> <span data-field="Writer"></span></div>
+          <div><strong>Actors:</strong> <span data-field="Actors"></span></div>
+          <div><strong>Plot:</strong> <span data-field="Plot"></span></div>          
+          <div><strong>Language:</strong> <span data-field="Language"></span></div>
+          <div><strong>Country:</strong> <span data-field="Country"></span></div>
+        </div>
+      </section>
+      <section id="favorites" class="js-page hidden">
+        <h1>Favorites</h1>
+        <div id="favorite-list" class="list-group"></div>
+      </section>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
