@@ -18,7 +18,7 @@ app.get('/favorites', function(req, res){
 
 app.post('/favorites', function(req, res){
   if(!req.body.name || !req.body.oid){
-    res.send("Error");
+    res.status(400).send("Error");
     return;
   }
   
